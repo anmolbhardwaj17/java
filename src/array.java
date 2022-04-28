@@ -1,9 +1,9 @@
-import java.util.Arrays;
+import java.util.*;
 import java.util.Scanner;
 
 public class array {
     public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
+//        Scanner in = new Scanner(System.in);
 //        int[] rnos = new int[5];
 //        int[] rnos2 = {23,12,45,32,15};
 //        int[] arr = new int[5];
@@ -43,14 +43,41 @@ public class array {
 //                }
 //            }
 //        }
-        String s = "1";
-        System.out.println(s.charAt(0));
+//        String s = "1";
+//        System.out.println(s.charAt(0));
         //System.out.println("true");
 
+        int[] mapping = {8, 9, 4, 0, 2, 1, 3, 5, 7, 6};
+        int[] nums = {991,338,38}  ;
+
+        for(int i=0;i<nums.length;i++){
+            String s = "";
+            while(nums[i]!=0){
+                int r = nums[i]%10;
+                s = mapping[r]+ s;
+                nums[i] = nums[i]/10;
+
+            }
+            nums[i] = Integer.parseInt(s);
+            System.out.println(nums[i]);
+        }
+
+
 
 
     }
-    static void change(int[] arr){
-       arr[0] = 99;
-    }
+//    static int[] sortJumbled(int[] mapping, int[] nums) {
+//        for(int i=0;i<nums.length;i++){
+//            String s;
+//            while(nums[i]!=0){
+//                int r = nums[i]%10;
+//                s = mapping[r]+ s;
+//                nums[i] = nums[i]/10;
+//
+//            }
+//            nums[i] = Integer.parseInt(s);
+//        }
+//        return Arrays.sort(nums);
+//
+//    }
 }
